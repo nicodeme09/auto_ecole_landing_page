@@ -6,7 +6,7 @@ const benefits = [
     stat: "80%",
     title: "Moins de temps sur la paperasse",
     description:
-      "Fini les tableurs Excel et les classeurs papier. Génération automatique des documents, relances automatiques et dossiers numérisés.",
+      "Fini les tableurs Excel et les classeurs papier. Quittances PDF, relances automatiques et dossiers numérisés en quelques clics.",
   },
   {
     icon: Zap,

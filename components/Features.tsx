@@ -1,7 +1,7 @@
 import {
-  Users, Calendar, CreditCard, FileText,
+  Users, Calendar, CreditCard, BookOpen,
   BarChart3, Bell, Shield, Smartphone,
-  GraduationCap, Clock
+  GraduationCap, Settings
 } from "lucide-react";
 
 const features = [
@@ -9,71 +9,64 @@ const features = [
     icon: Users,
     title: "Gestion des apprenants",
     description:
-      "Dossier complet pour chaque candidat : coordonnées, progression, résultats d'examen, historique des leçons et documents administratifs centralisés.",
+      "Dossier complet pour chaque candidat : coordonnées, progression, historique des paiements. Import en masse depuis un fichier CSV ou Excel en quelques secondes.",
     color: "orange",
   },
   {
-    icon: Calendar,
-    title: "Planning des leçons",
+    icon: BookOpen,
+    title: "Cohortes de formation",
     description:
-      "Calendrier interactif pour planifier les cours de conduite. Gérez les disponibilités de chaque moniteur et évitez les conflits d'horaires en un clic.",
+      "Organisez vos apprenants par cohorte (vague de formation). Affectez un moniteur, définissez les dates, suivez la progression du groupe en temps réel.",
     color: "blue",
   },
   {
     icon: CreditCard,
-    title: "Suivi des paiements",
+    title: "Paiements & quittances",
     description:
-      "Encaissements, restes à payer, quittances automatiques. Visualisez l'état financier de chaque dossier et relancez les impayés facilement.",
+      "Enregistrez les encaissements, calculez automatiquement le reste à payer et générez des quittances PDF. Journal de caisse et comptabilité par cohorte inclus.",
     color: "green",
   },
   {
     icon: Smartphone,
     title: "Espace apprenant en ligne",
     description:
-      "Chaque candidat accède à son espace personnel : progression, planning, factures et résultats. Moins de questions, plus d'autonomie.",
+      "Chaque candidat accède à son espace personnel : progression, planning, quittances. Paiement en ligne via FedaPay directement depuis l'espace candidat.",
     color: "purple",
   },
   {
-    icon: FileText,
-    title: "Documents & attestations",
-    description:
-      "Générez automatiquement les attestations de fin de formation, quittances, contrats et courriers administratifs en quelques secondes.",
-    color: "yellow",
-  },
-  {
     icon: BarChart3,
-    title: "Tableaux de bord & rapports",
+    title: "Tableaux de bord multi-sites",
     description:
-      "Visualisez vos indicateurs clés : taux de réussite, CA mensuel, occupation des moniteurs, dossiers en cours. Décidez sur la base de données réelles.",
+      "Pilotez votre activité depuis un seul tableau de bord : inscriptions, encaissements, restes à payer, taux d'encaissement — par site ou toutes agences confondues.",
     color: "red",
   },
   {
     icon: GraduationCap,
     title: "Suivi des examens",
     description:
-      "Enregistrez les tentatives code et conduite, les résultats, les repêchages. Un historique clair pour chaque candidat tout au long de sa formation.",
+      "Enregistrez les tentatives code et conduite, les résultats, les repêchages. Historique clair pour chaque candidat sur l'ensemble de son parcours.",
     color: "teal",
   },
   {
     icon: Bell,
-    title: "Notifications automatiques",
+    title: "Relances automatiques",
     description:
-      "Rappels de leçons, alertes de paiements en retard, notifications de résultats d'examen. Restez informé sans effort.",
+      "Détectez les apprenants avec des impayés et envoyez des relances par email en un clic. Tableau des priorités de relance directement sur le tableau de bord.",
     color: "pink",
   },
   {
     icon: Shield,
-    title: "Accès sécurisé multi-profils",
+    title: "Accès multi-profils sécurisé",
     description:
-      "Gérant, moniteurs, secrétariat — chaque rôle dispose de son accès personnalisé et sécurisé. Données chiffrées et hébergées en Europe.",
+      "Superadmin, moniteur, secrétariat — chaque rôle dispose de son accès personnalisé. Connexion sécurisée par email et mot de passe, données hébergées sur le cloud.",
     color: "indigo",
   },
   {
-    icon: Clock,
-    title: "Historique complet",
+    icon: Calendar,
+    title: "Planning des leçons",
     description:
-      "Retrouvez l'intégralité de l'historique de chaque apprenant : actions réalisées, paiements effectués, leçons passées. Zéro perte d'information.",
-    color: "gray",
+      "Planifiez les cours de conduite par cohorte. Gérez les disponibilités de chaque moniteur et consultez le calendrier de formation en un coup d'œil.",
+    color: "yellow",
   },
 ];
 
@@ -105,13 +98,13 @@ export default function Features() {
           </h2>
           <p className="text-lg text-gray-500 leading-relaxed">
             Auto École App centralise l&apos;ensemble de votre gestion dans une interface
-            pensée pour les professionnels de la conduite.
+            pensée pour les professionnels de la conduite au Bénin.
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.slice(0, 9).map((f) => {
+          {features.map((f) => {
             const Icon = f.icon;
             return (
               <div
@@ -133,13 +126,13 @@ export default function Features() {
         {/* Last feature — wide */}
         <div className="mt-5 group card-hover bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-6 text-white flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
-            <Clock size={20} className="text-white" />
+            <Settings size={20} className="text-white" />
           </div>
           <div className="flex-1">
-            <h3 className="font-semibold text-lg mb-1">Historique complet & traçabilité</h3>
+            <h3 className="font-semibold text-lg mb-1">Configuration complète & multi-agences</h3>
             <p className="text-orange-100 text-sm">
-              Chaque action est enregistrée. Retrouvez l&apos;intégralité de l&apos;historique de chaque
-              apprenant — leçons, paiements, examens — sans jamais perdre une donnée.
+              Plus de 70 paramètres configurables : nom de l&apos;établissement, tarifs, villes, moniteurs, types de permis.
+              Gérez plusieurs agences depuis un seul compte avec des tableaux de bord séparés par site.
             </p>
           </div>
         </div>

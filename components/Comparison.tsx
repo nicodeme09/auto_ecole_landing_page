@@ -17,7 +17,7 @@ const rows = [
     app: true,
   },
   {
-    feature: "Génération automatique de documents",
+    feature: "Quittances PDF automatiques",
     traditional: false,
     app: true,
   },
