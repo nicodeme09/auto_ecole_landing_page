@@ -247,7 +247,7 @@ export default function Hero() {
             </div>
 
             <p className="mt-6 text-xs text-white/30">
-              ✓ Sans engagement &nbsp;·&nbsp; ✓ Installation en 10 minutes &nbsp;·&nbsp; ✓ Support inclus
+              ✓ Sans engagement &nbsp;·&nbsp; ✓ Prise en main en 10 minutes &nbsp;·&nbsp; ✓ Support inclus
             </p>
           </div>
 
