@@ -56,7 +56,7 @@ export default function Pricing() {
           </div>
 
           <p className="mt-8 text-xs text-gray-500 border-t border-white/[0.06] pt-6">
-            ✓ Démo gratuite &nbsp;·&nbsp; ✓ Installation accompagnée &nbsp;·&nbsp; ✓ Sans engagement initial
+            ✓ Démo gratuite &nbsp;·&nbsp; ✓ Prise en main accompagnée &nbsp;·&nbsp; ✓ Sans engagement initial
           </p>
         </div>
       </div>
