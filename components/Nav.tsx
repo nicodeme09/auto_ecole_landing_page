@@ -14,6 +14,7 @@ export default function Nav() {
 
   const links = [
     { label: "Fonctionnalités", href: "#features" },
+    { label: "Tarifs", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ];

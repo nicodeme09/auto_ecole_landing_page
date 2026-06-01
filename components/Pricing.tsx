@@ -93,8 +93,8 @@ export default function Pricing() {
             Tarifs
           </span>
           <h2 className="text-4xl font-black text-white tracking-tight mb-4">
-            Simple, transparent,{" "}
-            <span className="text-gradient">en FCFA</span>
+            Simple et{" "}
+            <span className="text-gradient">sans surprise</span>
           </h2>
           <p className="text-gray-400 text-lg mb-8">
             14 jours d&apos;essai gratuit sur tous les plans — sans carte bancaire.
