@@ -21,8 +21,8 @@ export default function CTA() {
             </h2>
 
             <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
-              Rejoignez plus de 200 auto-écoles qui ont fait confiance à Auto École App
-              pour simplifier leur gestion au quotidien.
+              Demandez une démonstration gratuite et découvrez comment Auto École App
+              peut transformer la gestion de votre établissement.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

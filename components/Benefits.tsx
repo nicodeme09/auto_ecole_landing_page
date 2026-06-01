@@ -1,33 +1,29 @@
-import { TrendingDown, Zap, Eye, HeartHandshake } from "lucide-react";
+import { FolderOpen, Zap, LayoutDashboard, Smartphone } from "lucide-react";
 
 const benefits = [
   {
-    icon: TrendingDown,
-    stat: "80%",
-    title: "Moins de temps sur la paperasse",
+    icon: FolderOpen,
+    title: "Fini les classeurs papier",
     description:
-      "Fini les tableurs Excel et les classeurs papier. Quittances PDF, relances automatiques et dossiers numérisés en quelques clics.",
+      "Chaque dossier apprenant est numérique, complet et accessible en un clic. Les quittances PDF se génèrent automatiquement à chaque encaissement.",
   },
   {
     icon: Zap,
-    stat: "0",
-    title: "Double saisie",
+    title: "Zéro double saisie",
     description:
-      "Une information saisie une seule fois est disponible partout : dossier apprenant, facture, planning, espace en ligne.",
+      "Une information saisie une seule fois est disponible partout : dossier apprenant, facture, planning, espace en ligne. Vous ne ressaisissez jamais.",
   },
   {
-    icon: Eye,
-    stat: "100%",
-    title: "Visibilité en temps réel",
+    icon: LayoutDashboard,
+    title: "Vue complète en temps réel",
     description:
-      "Tableau de bord mis à jour en temps réel. Sachez exactement où en est chaque apprenant, chaque paiement, chaque moniteur.",
+      "Tableau de bord mis à jour instantanément. Apprenants actifs, restes à payer, relances prioritaires — tout visible sans fouiller vos cahiers.",
   },
   {
-    icon: HeartHandshake,
-    stat: "+40%",
-    title: "Satisfaction de vos apprenants",
+    icon: Smartphone,
+    title: "Espace candidat sur mobile",
     description:
-      "Espace en ligne dédié, rappels automatiques, suivi transparent. Vos candidats vivent une expérience moderne et professionnelle.",
+      "Chaque apprenant accède à son espace depuis son téléphone : progression, planning, quittances. Moins d'appels, moins de questions répétées.",
   },
 ];
 
@@ -38,14 +34,15 @@ export default function Benefits() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">
-            Bénéfices concrets
+            Ce que ça change
           </span>
           <h2 className="text-4xl font-black text-white tracking-tight mb-4">
-            Résultats mesurables dès{" "}
-            <span className="text-gradient">les premiers jours</span>
+            Conçu pour éliminer{" "}
+            <span className="text-gradient">les tâches répétitives</span>
           </h2>
           <p className="text-lg text-gray-400">
-            Auto École App ne fait pas que numériser votre travail — il le transforme.
+            Auto École App prend en charge ce qui vous fait perdre du temps — pour que vous vous
+            concentriez sur la formation, pas sur la paperasse.
           </p>
         </div>
 
@@ -63,7 +60,6 @@ export default function Benefits() {
                     <Icon size={22} className="text-orange-400" />
                   </div>
                   <div>
-                    <p className="text-4xl font-black text-gradient mb-2">{b.stat}</p>
                     <h3 className="font-semibold text-white text-lg mb-2">{b.title}</h3>
                     <p className="text-gray-400 text-sm leading-relaxed">{b.description}</p>
                   </div>
