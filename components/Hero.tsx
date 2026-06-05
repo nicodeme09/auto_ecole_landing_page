@@ -54,7 +54,7 @@ function DashboardMockup() {
             ))}
 
             <p className="px-3 text-[7px] font-semibold text-gray-400 uppercase tracking-wider mt-2 mb-1">Apprenants</p>
-            {["Inscriptions", "Paiements", "Relances", "Examens"].map(l => (
+            {["Inscriptions", "Paiements", "Examens"].map(l => (
               <div key={l} className="mx-2 flex items-center gap-2 px-2 py-1 rounded-lg">
                 <div className="w-2 h-2 rounded-sm border border-gray-300" />
                 <span className="text-[8px] text-gray-500">{l}</span>
@@ -62,7 +62,7 @@ function DashboardMockup() {
             ))}
 
             <p className="px-3 text-[7px] font-semibold text-gray-400 uppercase tracking-wider mt-2 mb-1">Finances</p>
-            {["Dépenses", "Comptabilité", "Facture"].map(l => (
+            {["Relances", "Dépenses", "Comptabilité"].map(l => (
               <div key={l} className="mx-2 flex items-center gap-2 px-2 py-1 rounded-lg">
                 <div className="w-2 h-2 rounded-sm border border-gray-300" />
                 <span className="text-[8px] text-gray-500">{l}</span>
