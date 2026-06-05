@@ -202,7 +202,7 @@ export default function Hero() {
           <div>
             <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
               <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse" />
-              Nouveau — Espace apprenant en ligne disponible
+              Nouveau — Assistant IA intégré dans la plateforme
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05] tracking-tight mb-6">
@@ -221,6 +221,7 @@ export default function Hero() {
                 "Suivi complet de chaque apprenant en temps réel",
                 "Encaissements, quittances et restes à payer automatiques",
                 "Espace en ligne pour vos candidats",
+                "Assistant IA disponible 24h/24 pour vous guider sur la plateforme",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-sm text-white/70">
                   <CheckCircle2 size={16} className="text-orange-500 mt-0.5 shrink-0" />

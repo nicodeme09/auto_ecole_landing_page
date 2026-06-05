@@ -1,7 +1,7 @@
 import {
   Users, Calendar, CreditCard, BookOpen,
   BarChart3, Bell, Shield, Smartphone,
-  GraduationCap, Settings
+  GraduationCap, Settings, Bot
 } from "lucide-react";
 
 const features = [
@@ -123,8 +123,25 @@ export default function Features() {
           })}
         </div>
 
-        {/* Last feature — wide */}
-        <div className="mt-5 group card-hover bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-6 text-white flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        {/* Wide card — IA */}
+        <div className="mt-5 group card-hover bg-gradient-to-r from-indigo-600 to-violet-600 rounded-2xl p-6 text-white flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
+            <Bot size={20} className="text-white" />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-1">
+              <h3 className="font-semibold text-lg">Assistant IA intégré</h3>
+              <span className="text-[10px] font-bold bg-white/20 text-white px-2 py-0.5 rounded-full uppercase tracking-wider">Nouveau</span>
+            </div>
+            <p className="text-indigo-100 text-sm">
+              Un assistant intelligent disponible 24h/24 directement dans la plateforme. Posez-lui vos questions sur l&apos;application,
+              demandez-lui de vous guider pas à pas, ou laissez-le analyser vos données et vous donner des conseils sur votre gestion.
+            </p>
+          </div>
+        </div>
+
+        {/* Wide card — Configuration */}
+        <div className="mt-3 group card-hover bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-6 text-white flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
             <Settings size={20} className="text-white" />
           </div>
