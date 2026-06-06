@@ -1,5 +1,7 @@
 import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
+const APP_URL = "https://auto-ecole-app-auxt.onrender.com";
+
 function DashboardMockup() {
   return (
     <div className="relative w-full max-w-2xl mx-auto">
@@ -232,10 +234,10 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="#contact"
+                href={`${APP_URL}/inscription-auto-ecole?plan=pro`}
                 className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3.5 rounded-xl transition-all hover:shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5"
               >
-                Demander une démo gratuite
+                Commencer gratuitement
                 <ArrowRight size={16} />
               </a>
               <a

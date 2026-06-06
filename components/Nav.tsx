@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
+const APP_URL = "https://auto-ecole-app-auxt.onrender.com";
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -50,16 +52,16 @@ export default function Nav() {
           {/* CTAs */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#contact"
+              href={`${APP_URL}/users/sign_in`}
               className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
             >
               Connexion
             </a>
             <a
-              href="#contact"
+              href={`${APP_URL}/inscription-auto-ecole?plan=pro`}
               className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
             >
-              Demander une démo
+              Essai gratuit
             </a>
           </div>
 
@@ -88,11 +90,11 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="#contact"
+            href={`${APP_URL}/inscription-auto-ecole?plan=pro`}
             className="block bg-orange-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg text-center mt-2"
             onClick={() => setOpen(false)}
           >
-            Demander une démo gratuite
+            Commencer gratuitement
           </a>
         </div>
       )}

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Check, ArrowRight, Zap } from "lucide-react";
 
+const APP_URL = "https://auto-ecole-app-auxt.onrender.com";
+
 const plans = [
   {
     id: "essentiel",
@@ -13,6 +15,7 @@ const plans = [
     annual: 10000,
     annualTotal: 120000,
     cta: "Commencer l'essai gratuit",
+    ctaHref: `${APP_URL}/inscription-auto-ecole?plan=essentiel`,
     highlight: false,
     limits: "1 agence · 75 apprenants · 3 utilisateurs",
     features: [
@@ -39,6 +42,7 @@ const plans = [
     annual: 22000,
     annualTotal: 264000,
     cta: "Commencer l'essai gratuit",
+    ctaHref: `${APP_URL}/inscription-auto-ecole?plan=pro`,
     highlight: true,
     limits: "3 agences · 300 apprenants · 10 utilisateurs",
     features: [
@@ -61,6 +65,7 @@ const plans = [
     annual: 42000,
     annualTotal: 504000,
     cta: "Nous contacter",
+    ctaHref: "#contact",
     highlight: false,
     limits: "Agences · apprenants · utilisateurs illimités",
     features: [
@@ -175,7 +180,7 @@ export default function Pricing() {
 
               {/* CTA */}
               <a
-                href="#contact"
+                href={plan.ctaHref}
                 className={`inline-flex items-center justify-center gap-2 font-semibold px-5 py-3 rounded-xl text-sm transition-all mb-6 ${
                   plan.highlight
                     ? "bg-white text-orange-600 hover:bg-orange-50"
