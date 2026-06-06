@@ -30,13 +30,8 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-black text-sm">AE</span>
-            </div>
-            <span className="font-bold text-gray-900 text-lg">
-              Auto École <span className="text-orange-500">App</span>
-            </span>
+          <a href="#" className="flex items-center">
+            <img src="/logo.png" alt="AutoÉcole 360" className="h-10 w-auto" />
           </a>
 
           {/* Desktop nav */}
