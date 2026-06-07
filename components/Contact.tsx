@@ -8,9 +8,26 @@ export default function Contact() {
     nom: "", ecole: "", email: "", telephone: "", message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError("Une erreur est survenue. Réessayez ou contactez-nous par email.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -135,16 +152,22 @@ export default function Contact() {
                   />
                 </div>
 
+                {error && (
+                  <p className="text-sm text-red-500 text-center">{error}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-orange-500/25"
+                  disabled={loading}
+                  className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-orange-500/25"
                 >
                   <Send size={16} />
-                  Demander ma démo gratuite
+                  {loading ? "Envoi en cours…" : "Demander ma démo gratuite"}
                 </button>
 
                 <p className="text-center text-xs text-gray-400">
-                  En soumettant ce formulaire, vous acceptez d&apos;être contacté par notre équipe.
+                  En soumettant ce formulaire, vous acceptez notre{" "}
+                  <a href="/confidentialite" className="underline hover:text-gray-600">politique de confidentialité</a>.
                 </p>
               </form>
             )}

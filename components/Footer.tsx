@@ -15,7 +15,6 @@ export default function Footer() {
       title: "Entreprise",
       links: [
         { label: "À propos", href: "#" },
-        { label: "Blog", href: "#" },
         { label: "Partenaires", href: "#" },
         { label: "Nous rejoindre", href: "#" },
       ],
@@ -23,19 +22,16 @@ export default function Footer() {
     {
       title: "Support",
       links: [
-        { label: "Documentation", href: "#" },
         { label: "Centre d'aide", href: "#" },
-        { label: "Contact", href: "#contact" },
-        { label: "Statut", href: "#" },
+        { label: "Contact", href: "/#contact" },
       ],
     },
     {
       title: "Légal",
       links: [
-        { label: "Mentions légales", href: "#" },
-        { label: "Politique de confidentialité", href: "#" },
-        { label: "CGU", href: "#" },
-        { label: "RGPD", href: "#" },
+        { label: "Mentions légales", href: "/mentions-legales" },
+        { label: "Confidentialité", href: "/confidentialite" },
+        { label: "CGU", href: "/cgu" },
       ],
     },
   ];
